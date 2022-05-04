@@ -15,6 +15,8 @@ body {
     font-family: 'Inter', sans-serif;
     /* font-family: 'Lexend Deca', sans-serif; */
     font-size: 15px;
+    background-color: var(--Very-dark-blue-main-background);
+    line-height: 1.5;
 }
 
 h1,
@@ -22,4 +24,121 @@ h2,
 h3 {
     font-weight: 700;
     color: #fff;
+}
+
+
+/* CARD */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    overflow: hidden;
+    margin: 4rem;
+    margin-bottom: 0;
+}
+
+.container {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--Dark-desaturated-blue-card-background);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.card__image {
+    width: 100%;
+    filter: invert(1%) sepia(11%) saturate(4840%) hue-rotate(238deg) brightness(60%) contrast(87%);
+}
+
+.card__content__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.card__content__heading {
+    line-height: 1.2;
+}
+
+.card__content__heading,
+.card__content__text {
+    text-align: center;
+}
+
+.card__content__text {
+    color: var(--Slightly-transparent-white-main-paragraph);
+    margin-bottom: 1rem;
+}
+
+.card__likes {
+    margin-bottom: 1rem;
+    align-self: center;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.likes__headings,
+.likes {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.likes__text {
+    color: var(--Slightly-transparent-white-stat-headings);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 11px;
+}
+
+.insight {
+    color: var(--Soft-violet-accent);
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .card__image {
+        width: 50%;
+    }
+    .card__likes {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+    .card__content__text {
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+    .card__content {
+        text-align: left;
+    }
+    .card__content__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+    .card__content__heading {
+        text-align: left;
+        margin-top: 0;
+        font-size: 2rem;
+    }
+    .likes__headings {
+        margin-left: 0;
+        text-align: left;
+    }
+    .likes__text {
+        margin-right: 1rem;
+    }
 }
